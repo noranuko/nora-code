@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "astro": "^4.14.5",
+    "microcms-js-sdk": "^3.1.2",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
