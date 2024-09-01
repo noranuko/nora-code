@@ -6,25 +6,25 @@ const response = await getBlogs({ fields: ['id', 'title'] });
 ---
 
 <BaseLayout>
-  <main>
-    <ul>
-      {
-        response.contents.map((content: any) => (
-          <li>
-            <a href={content.id}>{content.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-    <button class="btn btn-primary">Buttonaaa</button>
-  </main>
+	<main>
+		<ul>
+			{
+				response.contents.map((content: any) => (
+					<li>
+						<a href={content.id}>{content.title}</a>
+					</li>
+				))
+			}
+		</ul>
+		<button class="btn btn-primary">Buttonaaa</button>
+	</main>
 </BaseLayout>
 
 <style lang="scss">
-  main {
-    max-width: 60ch;
-    padding: 1em;
-    margin: auto;
-    color: #ccc;
-  }
+	main {
+		max-width: 60ch;
+		padding: 1em;
+		margin: auto;
+		color: #ccc;
+	}
 </style>

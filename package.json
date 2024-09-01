@@ -1,36 +1,36 @@
 {
-  "name": "nora-code",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "lint": "npm run prettier && npm run eslint && npm run stylelint",
-    "prettier": "prettier --write 'src/**/*.{ts,astro,scss}'",
-    "eslint": "eslint 'src/**/*.{ts,astro}'",
-    "stylelint": "stylelint --fix 'src/**/*.{astro,scss}'"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.14.5",
-    "microcms-js-sdk": "^3.1.2",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^8.2.0",
-    "daisyui": "^4.12.10",
-    "eslint": "^9.9.1",
-    "eslint-plugin-astro": "^1.2.3",
-    "postcss-html": "^1.7.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "stylelint": "^16.9.0",
-    "stylelint-config-recess-order": "^5.1.0",
-    "stylelint-config-standard-scss": "^13.1.0"
-  }
+	"name": "nora-code",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "npm run prettier && npm run eslint && npm run stylelint",
+		"prettier": "prettier --write 'src/**/*.{ts,astro,scss}'",
+		"eslint": "eslint 'src/**/*.{ts,astro}'",
+		"stylelint": "stylelint --fix 'src/**/*.{astro,scss}'"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.3",
+		"@astrojs/tailwind": "^5.1.0",
+		"astro": "^4.14.5",
+		"microcms-js-sdk": "^3.1.2",
+		"tailwindcss": "^3.4.10",
+		"typescript": "^5.5.4"
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "^8.2.0",
+		"daisyui": "^4.12.10",
+		"eslint": "^9.9.1",
+		"eslint-plugin-astro": "^1.2.3",
+		"postcss-html": "^1.7.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-astro": "^0.14.1",
+		"stylelint": "^16.9.0",
+		"stylelint-config-recess-order": "^5.1.0",
+		"stylelint-config-standard-scss": "^13.1.0"
+	}
 }
