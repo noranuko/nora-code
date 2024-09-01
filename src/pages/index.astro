@@ -1,7 +1,7 @@
 ---
 //microCMS呼び出し
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getBlogs } from '../library/microcms';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getBlogs } from '@/library/microcms';
 const response = await getBlogs({ fields: ['id', 'title'] });
 ---
 
