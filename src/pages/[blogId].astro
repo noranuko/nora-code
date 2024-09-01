@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { getBlogs, getBlogDetail } from "../library/microcms";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getBlogs, getBlogDetail } from '../library/microcms';
 
 // 詳細記事ページの全パスを取得
 export async function getStaticPaths() {
-  const response = await getBlogs({ fields: ["id"] });
+  const response = await getBlogs({ fields: ['id'] });
   return response.contents.map((content: any) => ({
     params: {
       blogId: content.id,
@@ -21,14 +21,14 @@ const blog = await getBlogDetail(blogId as string);
   <main>
     <h1 class="title">{blog.title}</h1>
     <p class="publishedAt">公開日時：{blog.publishedAt}</p>
-    <div class="post" set:html={blog.content} />
+    <div class="post">{blog.content}</div>
   </main>
 </BaseLayout>
 
 <style>
   main {
-    margin: auto;
-    padding: 1em;
     max-width: 60ch;
+    padding: 1em;
+    margin: auto;
   }
 </style>

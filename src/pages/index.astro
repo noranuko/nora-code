@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 //microCMS呼び出し
-import { getBlogs } from "../library/microcms";
-const response = await getBlogs({ fields: ["id", "title"] });
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getBlogs } from '../library/microcms';
+const response = await getBlogs({ fields: ['id', 'title'] });
 ---
 
 <BaseLayout>
@@ -16,14 +16,15 @@ const response = await getBlogs({ fields: ["id", "title"] });
         ))
       }
     </ul>
-    <button class="btn btn-primary">Button</button>
+    <button class="btn btn-primary">Buttonaaa</button>
   </main>
 </BaseLayout>
 
-<style>
+<style lang="scss">
   main {
-    margin: auto;
-    padding: 1em;
     max-width: 60ch;
+    padding: 1em;
+    margin: auto;
+    color: #ccc;
   }
 </style>
