@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  // import ... from @ を使うための設定
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
