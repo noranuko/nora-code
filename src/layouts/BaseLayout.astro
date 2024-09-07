@@ -1,16 +1,34 @@
 ---
-
+import Header from '@/layouts/Header.astro';
+import Footer from '@/layouts/Footer.astro';
 ---
 
-<html lang="ja">
+<style lang="scss">
+	main {
+		max-width: 60ch;
+		padding: 1em;
+		margin: auto;
+	}
+</style>
+
+<html lang="ja" data-theme="cupcake">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>nora Code</title>
+		<title>nora code</title>
+		<meta name="author" content="nora code" />
+		<meta name="description" content="nora codeのポートフォリオサイトです。" />
 	</head>
+
 	<body>
-		<slot />
+		<Header />
+
+		<main>
+			<slot />
+		</main>
+
+		<Footer />
 	</body>
 </html>

@@ -6,25 +6,13 @@ const response = await getBlogs({ fields: ['id', 'title'] });
 ---
 
 <BaseLayout>
-	<main>
-		<ul>
-			{
-				response.contents.map((content: any) => (
-					<li>
-						<a href={content.id}>{content.title}</a>
-					</li>
-				))
-			}
-		</ul>
-		<button class="btn btn-primary">Buttonaaa</button>
-	</main>
+	<ul>
+		{
+			response.contents.map((content: any) => (
+				<li>
+					<a href={content.id}>{content.title}を読む</a>
+				</li>
+			))
+		}
+	</ul>
 </BaseLayout>
-
-<style lang="scss">
-	main {
-		max-width: 60ch;
-		padding: 1em;
-		margin: auto;
-		color: #ccc;
-	}
-</style>
