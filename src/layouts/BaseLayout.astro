@@ -1,6 +1,8 @@
 ---
 import Header from '@/layouts/Header.astro';
 import Footer from '@/layouts/Footer.astro';
+import { getSettings } from '@/library/microcms';
+const settings = await getSettings();
 ---
 
 <html lang="ja" data-theme="cupcake">
@@ -9,9 +11,9 @@ import Footer from '@/layouts/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>nora code</title>
-		<meta name="author" content="nora code" />
-		<meta name="description" content="nora codeのポートフォリオサイトです。" />
+		<title>{settings.siteName}</title>
+		<meta name="author" content={settings.author} />
+		<meta name="description" content={settings.description} />
 	</head>
 
 	<body>
