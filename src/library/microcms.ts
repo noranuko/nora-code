@@ -23,6 +23,11 @@ export type Blog = {
 	revisedAt: string;
 	title: string;
 	content: string;
+	eyecatch: {
+		url: string;
+		width: number;
+		height: number;
+	};
 };
 
 export type BlogResponse = {

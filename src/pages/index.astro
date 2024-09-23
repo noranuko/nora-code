@@ -1,18 +1,21 @@
 ---
 //microCMS呼び出し
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getBlogs } from '@/library/microcms';
-const response = await getBlogs({ fields: ['id', 'title'] });
+import PostCard from '@/layouts/PostCard.astro';
+import { getBlogs, type Blog } from '@/library/microcms';
+const response = await getBlogs({ fields: ['id', 'title', 'eyecatch'] });
+console.log(response.contents);
 ---
 
 <BaseLayout>
-	<ul>
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 		{
-			response.contents.map((content: any) => (
-				<li>
-					<a href={content.id}>{content.title}を読む</a>
-				</li>
+			response.contents.map((content: Blog) => (
+				<PostCard id={content.id} title={content.title} eyecatch={content.eyecatch} />
+				// <li>
+				// 	<a href={content.id}>{content.title}を読む</a>
+				// </li>
 			))
 		}
-	</ul>
+	</div>
 </BaseLayout>

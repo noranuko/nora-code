@@ -1,0 +1,14 @@
+---
+const { id, title, eyecatch } = Astro.props;
+---
+
+<a href={id}>
+	<div class="card card-compact bg-base-100 shadow-xl">
+		<figure>
+			<img src={eyecatch.url} alt="Shoes" />
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title text-base">{title}</h2>
+		</div>
+	</div>
+</a>
