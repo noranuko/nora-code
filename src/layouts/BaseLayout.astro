@@ -19,18 +19,10 @@ const settings = await getSettings();
 	<body>
 		<Header />
 
-		<main>
+		<main class="container my-4 mx-auto px-4">
 			<slot />
 		</main>
 
 		<Footer />
-
-		<style lang="scss">
-			main {
-				max-width: 60ch;
-				padding: 1em;
-				margin: auto;
-			}
-		</style>
 	</body>
 </html>
